@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+    <filter>
+        <filter-name>Set Character Encoding</filter-name>
+        <filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>ignore</param-name>
+            <param-value>false</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>Set Character Encoding</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    
+
+    <servlet>
+        <servlet-name>CreationClient</servlet-name>
+        <servlet-class>fr.tp4.servlets.CreationClient</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ListerClients</servlet-name>
+    	<servlet-class>fr.tp4.servlets.ListerClients</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SupprimerClient</servlet-name>
+        <servlet-class>fr.tp4.servlets.SupprimerClient</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CreationCommande</servlet-name>
+        <servlet-class>fr.tp4.servlets.CreationCommande</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ListerCommandes</servlet-name>
+        <servlet-class>fr.tp4.servlets.ListerCommandes</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SupprimerCommande</servlet-name>
+        <servlet-class>fr.tp4.servlets.SupprimerCommande</servlet-class>
+    </servlet>
+	
+
+    <servlet-mapping>
+        <servlet-name>CreationClient</servlet-name>
+        <url-pattern>/creationClient</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListerClients</servlet-name>
+        <url-pattern>/listerClients</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SupprimerClient</servlet-name>
+        <url-pattern>/supprimerClient</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreationCommande</servlet-name>
+        <url-pattern>/creationCommande</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListerCommandes</servlet-name>
+        <url-pattern>/listerCommandes</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SupprimerCommande</servlet-name>
+        <url-pattern>/supprimerCommande</url-pattern>
+    </servlet-mapping>
+</web-app>
